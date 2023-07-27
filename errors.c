@@ -22,7 +22,7 @@ int malloc_error(void)
  * @file: filename
  * Return: exit failure
  */
-int open_errors(char *file)
+int open_error(char *file)
 {
 	fprintf(stderr, "Error: Can't open file %s\n", file);
 	return (EXIT_FAILURE);
@@ -36,16 +36,16 @@ int open_errors(char *file)
 int unknown_op_error(char *opcode, unsigned int line_num)
 {
 	fprintf(stderr, "L%u: unknown instruction %s\n"
-			, line, opcode);
+			, line_num, opcode);
 	return (EXIT_FAILURE);
 }
 /**
  * int_error - invalid monty push
- * @line: line number
+ * @line_num: line number
  * Return: exit failure
  */
-int int_error(unsigned int line)
+int int_error(unsigned int line_num)
 {
-	fprintf(stderr, "L%u: usage: push integer\n", line);
+	fprintf(stderr, "L%u: usage: push integer\n", line_num);
 	return (EXIT_FAILURE);
 }

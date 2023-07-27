@@ -64,7 +64,7 @@ void monty_pall(stack_t **stack, unsigned int line_num)
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
 	}
-	(voif)line_num;
+	(void)line_num;
 }
 /**
  * monty_pint -  print top value

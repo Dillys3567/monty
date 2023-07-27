@@ -2,7 +2,7 @@
 
 char *get_int(int n);
 unsigned int _abs(int);
-int get_num_len(unsignedd int n, unsigned int base);
+int get_num_len(unsigned int n, unsigned int base);
 void fill_base_buff(unsigned int n, unsigned int base, char *buff
 		, int buff_size);
 
@@ -66,7 +66,7 @@ int get_num_len(unsigned int n, unsigned int base)
  * @buff_size: size of buffer
  */
 void fill_base_buff(unsigned int n, unsigned int base, char *buff
-		, int buff_size);
+		, int buff_size)
 {
 	int rem, x = buff_size - 1;
 

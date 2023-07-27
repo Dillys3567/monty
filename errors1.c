@@ -31,6 +31,16 @@ int short_stack_error(unsigned int line_num, char *op)
 	return (EXIT_FAILURE);
 }
 /**
+ * div_error - print div error
+ * @line_num: line number
+ * Return: exit failure
+ */
+int div_error(unsigned int line_num)
+{
+	fprintf(stderr, "L%u: division by zero\n", line_num);
+	return (EXIT_FAILURE);
+}
+/**
  * pchar_error - error for empty stack and non-char values
  * @line_num: line number
  * @message: error message
